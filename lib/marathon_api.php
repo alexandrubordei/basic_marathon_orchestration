@@ -3,11 +3,6 @@
 
 include_once("utilities.php");
 
-function get_marathon_service_url()
-{
-	return get_config()->marathon_uri."/v2";
-}
-
 function marathon_create($app_id)
 {
 	$app_id_sanitised=preg_replace("/[^A-Za-z0-9 ]/", '', $app_id);
@@ -30,7 +25,7 @@ function marathon_create($app_id)
 	$app_definition_json=json_encode($app_definition);
 
 	$ch  = curl_init();
-	$url = get_marathon_service_url()."/apps";
+	$url = get_config()->marathon_uri."/v2/apps";
 
 	dbg_log("Calling ".$url);
 
@@ -55,7 +50,7 @@ function marathon_get_tasks($app_id)
 	$app_id_sanitised=preg_replace("/[^A-Za-z0-9 ]/", '', $app_id);
 
 	$ch  = curl_init();
-	$url = get_marathon_service_url()."/apps/cb-".$app_id_sanitised."/tasks";
+	$url = get_config()->marathon_uri."/v2/apps/cb-".$app_id_sanitised."/tasks";
 
 	dbg_log("Calling ".$url);
 
@@ -70,5 +65,3 @@ function marathon_get_tasks($app_id)
 	return $decoded_object->tasks;
 }
 
-
-?>

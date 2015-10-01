@@ -3,5 +3,14 @@
 	"mesos_uri": "http://instance-11842.bigstep.io:5050",
 	"host_ssh_private_key": "/Users/alexandrubordei/.ssh/id_rsa_tmp",
 	"host_ssh_username": "root",
-	"host_ssh_private_key_password": ""
+	"host_ssh_private_key_password": "",
+	"pipework_path": "/opt/pipework/pipework",
+	"wanbridge": "wanbr",
+	"ip_pool_state_file": "/tmp/__ip_ranges_state.json",
+	"ip_pool": [ 
+		"84.40.61.34",
+		"84.40.61.35",
+		"84.40.61.36",
+		"84.40.61.37"
+	]
 }
