@@ -1,0 +1,7 @@
+{
+	"marathon_uri": "http://instance-11842.bigstep.io:8080",
+	"mesos_uri": "http://instance-11842.bigstep.io:5050",
+	"host_ssh_private_key": "/Users/alexandrubordei/.ssh/id_rsa_tmp",
+	"host_ssh_username": "root",
+	"host_ssh_private_key_password": ""
+}
