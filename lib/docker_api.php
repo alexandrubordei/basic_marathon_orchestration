@@ -11,7 +11,7 @@ function docker_get_containers($host)
 	$ssh = ssh_connect($host);
 	$json=$ssh->exec($cmd);
 	dbg_log($json);
-	return json_decode($json);
+	return json_decode($json,true);
 }
 
 function docker_get_container_details($host, $containerID)
@@ -23,7 +23,7 @@ function docker_get_container_details($host, $containerID)
 	$ssh = ssh_connect($host);
 	$json=$ssh->exec($cmd);
 	dbg_log($json);
-	return json_decode($json);
+	return json_decode($json,true);
 }
 
 function docker_add_container_public_ip($host, $containerID, $ip, $netmask, $gateway)

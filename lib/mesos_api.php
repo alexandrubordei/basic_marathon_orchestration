@@ -3,15 +3,12 @@
 
 include_once("utilities.php");
 
-function get_mesos_service_url()
-{
-	return get_config()->mesos_uri;
-}
+
 function mesos_get_state()
 {
 
 	$ch  = curl_init();
-	$url = get_mesos_service_url()."/state.json";
+	$url =  get_config()->mesos_uri."/state.json";
 
 	dbg_log("Calling ".$url);
 
@@ -22,7 +19,7 @@ function mesos_get_state()
 
 	dbg_log($result);
 	curl_close($ch);
-	$decoded_object=json_decode($result);	
+	$decoded_object=json_decode($result,true);	
 	return $decoded_object;
 }
 

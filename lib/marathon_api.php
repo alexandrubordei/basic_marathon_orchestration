@@ -3,20 +3,20 @@
 
 include_once("utilities.php");
 
-function marathon_create($app_id)
+function marathon_create($app_id, $docker_image_name,$cpus,$mem,$instances)
 {
 	$app_id_sanitised=preg_replace("/[^A-Za-z0-9 ]/", '', $app_id);
 	$app_definition = array(
-		"id"   => "cb-".$app_id_sanitised,
-		"cpus" => 0.5,
-		"mem"  => 1000,
-		"instances" => 3,
+		"id"   => get_config()->app_prefix."-".$app_id_sanitised,
+		"cpus" => $cpus,
+		"mem"  => $mem,
+		"instances" => $instances,
 		"container" =>
 		    array(
 			"type" => "DOCKER",
 			"docker" => 
 			    array(
-				"image" => "couchbase/server",
+				"image" => $docker_image_name,
 				"network" => "BRIDGE"
 			   )
 		    )
@@ -50,7 +50,7 @@ function marathon_get_tasks($app_id)
 	$app_id_sanitised=preg_replace("/[^A-Za-z0-9 ]/", '', $app_id);
 
 	$ch  = curl_init();
-	$url = get_config()->marathon_uri."/v2/apps/cb-".$app_id_sanitised."/tasks";
+	$url = get_config()->marathon_uri."/v2/apps/".get_config()->app_prefix."-".$app_id_sanitised."/tasks";
 
 	dbg_log("Calling ".$url);
 
@@ -58,7 +58,12 @@ function marathon_get_tasks($app_id)
 	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
 	$result = curl_exec($ch);
 
+	$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+	if($httpCode != 200)
+		return NULL;
 
+
+	
 	dbg_log($result);
 	curl_close($ch);
 	$decoded_object=json_decode($result);	

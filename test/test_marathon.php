@@ -2,7 +2,7 @@
 require("marathon_api.php");
 
  
-marathon_create("test");
+marathon_create("test","couchbase/server");
 
 
 ?>

@@ -7,7 +7,7 @@ $task=marathon_get_tasks("test");
 
 #var_dump($task[0]->host);
 
-#var_dump($task[0]->id);
+var_dump($task[0]);
 
 $mesos_state= mesos_get_state();
 

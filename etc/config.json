@@ -6,6 +6,7 @@
 	"host_ssh_private_key_password": "",
 	"pipework_path": "/opt/pipework/pipework",
 	"wanbridge": "wanbr",
+	"app_prefix":"cb",
 	"ip_pool_state_file": "/tmp/__ip_ranges_state.json",
 	"ip_pool": [ 
 		"84.40.61.34",
@@ -13,4 +14,6 @@
 		"84.40.61.36",
 		"84.40.61.37"
 	]
+	"ip_pool_gateway":"84.40.61.33",
+	"ip_pool_netmask": 27
 }

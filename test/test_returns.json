@@ -1,0 +1,548 @@
+2015-10-01 16:53:55   {"activated_slaves":1,"build_date":"2015-09-25 19:13:37","build_time":1443208417,"build_user":"root","cluster":"Mesos-1","completed_frameworks":[],"deactivated_slaves":0,"elected_time":1443484804.01158,"flags":{"allocation_interval":"1secs","allocator":"HierarchicalDRF","authenticate":"false","authenticate_slaves":"false","authenticators":"crammd5","authorizers":"local","cluster":"Mesos-1","framework_sorter":"drf","help":"false","initialize_driver_logging":"true","log_auto_initialize":"true","log_dir":"\/var\/log\/mesos","logbufsecs":"0","logging_level":"INFO","max_slave_ping_timeouts":"5","port":"5050","quiet":"false","quorum":"1","recovery_slave_removal_limit":"100%","registry":"replicated_log","registry_fetch_timeout":"1mins","registry_store_timeout":"5secs","registry_strict":"false","root_submissions":"true","slave_ping_timeout":"15secs","slave_reregister_timeout":"10mins","user_sorter":"drf","version":"false","webui_dir":"\/usr\/share\/mesos\/webui","work_dir":"\/var\/lib\/mesos","zk":"zk:\/\/instance-11842.bigstep.io:2181\/mesos","zk_session_timeout":"10secs"},"frameworks":[{"active":true,"capabilities":[],"checkpoint":true,"completed_tasks":[{"executor_id":"","framework_id":"20150928-194341-1916610644-5050-5659-0000","id":"cb-test.8fe0a2f6-663d-11e5-92d4-28802390ec8c","labels":[],"name":"cb-test","resources":{"cpus":0.5,"disk":0,"mem":1000,"ports":"[31646-31646]"},"slave_id":"20150928-194335-1916610644-5050-4912-S0","state":"TASK_FAILED","statuses":[{"state":"TASK_FAILED","timestamp":1443485089.89603}]},{"executor_id":"","framework_id":"20150928-194341-1916610644-5050-5659-0000","id":"cb-test.9370a787-663d-11e5-92d4-28802390ec8c","labels":[],"name":"cb-test","resources":{"cpus":0.5,"disk":0,"mem":1000,"ports":"[31497-31497]"},"slave_id":"20150928-194335-1916610644-5050-4912-S0","state":"TASK_FAILED","statuses":[{"state":"TASK_FAILED","timestamp":1443485095.81175}]},{"executor_id":"","framework_id":"20150928-194341-1916610644-5050-5659-0000","id":"cb-test.9704a3b8-663d-11e5-92d4-28802390ec8c","labels":[],"name":"cb-test","resources":{"cpus":0.5,"disk":0,"mem":1000,"ports":"[31377-31377]"},"slave_id":"20150928-194335-1916610644-5050-4912-S0","state":"TASK_FAILED","statuses":[{"state":"TASK_FAILED","timestamp":1443485101.83047}]}],"executors":[],"failover_timeout":604800,"hostname":"instance-11842.bigstep.io","id":"20150928-194341-1916610644-5050-5659-0000","name":"marathon","offered_resources":{"cpus":0,"disk":0,"mem":0},"offers":[],"pid":"scheduler-06005827-a968-44e8-9af8-3a7739536b6d@84.40.61.114:56825","registered_time":1443484805.46246,"resources":{"cpus":1.5,"disk":0,"mem":3000,"ports":"[31389-31389, 31554-31554, 31162-31162]"},"role":"*","tasks":[{"executor_id":"","framework_id":"20150928-194341-1916610644-5050-5659-0000","id":"cb-test.c326b46b-663d-11e5-92d4-28802390ec8c","labels":[],"name":"cb-test","resources":{"cpus":0.5,"disk":0,"mem":1000,"ports":"[31162-31162]"},"slave_id":"20150928-194335-1916610644-5050-4912-S0","state":"TASK_RUNNING","statuses":[{"labels":[{"key":"Docker.NetworkSettings.IPAddress","value":"172.167.1.4"}],"state":"TASK_RUNNING","timestamp":1443485116.6033}]},{"executor_id":"","framework_id":"20150928-194341-1916610644-5050-5659-0000","id":"cb-test.bf92b83a-663d-11e5-92d4-28802390ec8c","labels":[],"name":"cb-test","resources":{"cpus":0.5,"disk":0,"mem":1000,"ports":"[31554-31554]"},"slave_id":"20150928-194335-1916610644-5050-4912-S0","state":"TASK_RUNNING","statuses":[{"labels":[{"key":"Docker.NetworkSettings.IPAddress","value":"172.167.1.3"}],"state":"TASK_RUNNING","timestamp":1443485110.58209}]},{"executor_id":"","framework_id":"20150928-194341-1916610644-5050-5659-0000","id":"cb-test.bb65d769-663d-11e5-92d4-28802390ec8c","labels":[],"name":"cb-test","resources":{"cpus":0.5,"disk":0,"mem":1000,"ports":"[31389-31389]"},"slave_id":"20150928-194335-1916610644-5050-4912-S0","state":"TASK_RUNNING","statuses":[{"labels":[{"key":"Docker.NetworkSettings.IPAddress","value":"172.167.1.2"}],"state":"TASK_RUNNING","timestamp":1443485105.36827}]}],"unregistered_time":0,"used_resources":{"cpus":1.5,"disk":0,"mem":3000,"ports":"[31389-31389, 31554-31554, 31162-31162]"},"user":"root","webui_url":"http:\/\/instance-11842.bigstep.io:8080"}],"git_sha":"44873806c2bb55da37e9adbece938274d8cd7c48","git_tag":"0.24.1","hostname":"instance-11842.bigstep.io","id":"20150928-194341-1916610644-5050-5659","leader":"master@84.40.61.114:5050","log_dir":"\/var\/log\/mesos","orphan_tasks":[],"pid":"master@84.40.61.114:5050","slaves":[{"active":true,"attributes":{},"hostname":"instance-11842.bigstep.io","id":"20150928-194335-1916610644-5050-4912-S0","offered_resources":{"cpus":0,"disk":0,"mem":0},"pid":"slave(1)@84.40.61.114:5051","registered_time":1443484804.96005,"reregistered_time":1443484804.96009,"reserved_resources":{},"resources":{"cpus":8,"disk":31725,"mem":30947,"ports":"[31000-32000]"},"unreserved_resources":{"cpus":8,"disk":31725,"mem":30947,"ports":"[31000-32000]"},"used_resources":{"cpus":1.5,"disk":0,"mem":3000,"ports":"[31389-31389, 31554-31554, 31162-31162]"}}],"start_time":1443483821.43293,"unregistered_frameworks":[],"version":"0.24.1"}
+          string(12) "TASK_RUNNING"
+              string(12) "TASK_RUNNING"
+          string(12) "TASK_RUNNING"
+              string(12) "TASK_RUNNING"
+          string(12) "TASK_RUNNING"
+              string(12) "TASK_RUNNING"
+16:53:55:alexandrubordei:~/code/mesos/mbasicui $ vim ./bin/test_marathon2.php 
+16:54:58:alexandrubordei:~/code/mesos/mbasicui $ php ./bin/test_marathon2.php  
+2015-10-01 16:55:43   Calling http://instance-11842.bigstep.io:8080/v2/apps/cb-test/tasks
+2015-10-01 16:55:44   {"tasks":[{"appId":"/cb-test","id":"cb-test.c326b46b-663d-11e5-92d4-28802390ec8c","host":"instance-11842.bigstep.io","ports":[31162],"startedAt":"2015-09-29T00:05:16.612Z","stagedAt":"2015-09-29T00:05:15.780Z","version":"2015-09-29T00:03:48.917Z"},{"appId":"/cb-test","id":"cb-test.bb65d769-663d-11e5-92d4-28802390ec8c","host":"instance-11842.bigstep.io","ports":[31389],"startedAt":"2015-09-29T00:05:05.382Z","stagedAt":"2015-09-29T00:05:02.772Z","version":"2015-09-29T00:03:48.917Z"},{"appId":"/cb-test","id":"cb-test.bf92b83a-663d-11e5-92d4-28802390ec8c","host":"instance-11842.bigstep.io","ports":[31554],"startedAt":"2015-09-29T00:05:10.593Z","stagedAt":"2015-09-29T00:05:09.777Z","version":"2015-09-29T00:03:48.917Z"}]}
+object(stdClass)#2 (7) {
+  ["appId"]=>
+  string(8) "/cb-test"
+  ["id"]=>
+  string(44) "cb-test.c326b46b-663d-11e5-92d4-28802390ec8c"
+  ["host"]=>
+  string(25) "instance-11842.bigstep.io"
+  ["ports"]=>
+  array(1) {
+    [0]=>
+    int(31162)
+  }
+  ["startedAt"]=>
+  string(24) "2015-09-29T00:05:16.612Z"
+  ["stagedAt"]=>
+  string(24) "2015-09-29T00:05:15.780Z"
+  ["version"]=>
+  string(24) "2015-09-29T00:03:48.917Z"
+}
+2015-10-01 16:55:44   Calling http://instance-11842.bigstep.io:5050/state.json
+2015-10-01 16:55:44   {"activated_slaves":1,"build_date":"2015-09-25 19:13:37","build_time":1443208417,"build_user":"root","cluster":"Mesos-1","completed_frameworks":[],"deactivated_slaves":0,"elected_time":1443484804.01158,"flags":{"allocation_interval":"1secs","allocator":"HierarchicalDRF","authenticate":"false","authenticate_slaves":"false","authenticators":"crammd5","authorizers":"local","cluster":"Mesos-1","framework_sorter":"drf","help":"false","initialize_driver_logging":"true","log_auto_initialize":"true","log_dir":"\/var\/log\/mesos","logbufsecs":"0","logging_level":"INFO","max_slave_ping_timeouts":"5","port":"5050","quiet":"false","quorum":"1","recovery_slave_removal_limit":"100%","registry":"replicated_log","registry_fetch_timeout":"1mins","registry_store_timeout":"5secs","registry_strict":"false","root_submissions":"true","slave_ping_timeout":"15secs","slave_reregister_timeout":"10mins","user_sorter":"drf","version":"false","webui_dir":"\/usr\/share\/mesos\/webui","work_dir":"\/var\/lib\/mesos","zk":"zk:\/\/instance-11842.bigstep.io:2181\/mesos","zk_session_timeout":"10secs"},"frameworks":[{"active":true,"capabilities":[],"checkpoint":true,"completed_tasks":[{"executor_id":"","framework_id":"20150928-194341-1916610644-5050-5659-0000","id":"cb-test.8fe0a2f6-663d-11e5-92d4-28802390ec8c","labels":[],"name":"cb-test","resources":{"cpus":0.5,"disk":0,"mem":1000,"ports":"[31646-31646]"},"slave_id":"20150928-194335-1916610644-5050-4912-S0","state":"TASK_FAILED","statuses":[{"state":"TASK_FAILED","timestamp":1443485089.89603}]},{"executor_id":"","framework_id":"20150928-194341-1916610644-5050-5659-0000","id":"cb-test.9370a787-663d-11e5-92d4-28802390ec8c","labels":[],"name":"cb-test","resources":{"cpus":0.5,"disk":0,"mem":1000,"ports":"[31497-31497]"},"slave_id":"20150928-194335-1916610644-5050-4912-S0","state":"TASK_FAILED","statuses":[{"state":"TASK_FAILED","timestamp":1443485095.81175}]},{"executor_id":"","framework_id":"20150928-194341-1916610644-5050-5659-0000","id":"cb-test.9704a3b8-663d-11e5-92d4-28802390ec8c","labels":[],"name":"cb-test","resources":{"cpus":0.5,"disk":0,"mem":1000,"ports":"[31377-31377]"},"slave_id":"20150928-194335-1916610644-5050-4912-S0","state":"TASK_FAILED","statuses":[{"state":"TASK_FAILED","timestamp":1443485101.83047}]}],"executors":[],"failover_timeout":604800,"hostname":"instance-11842.bigstep.io","id":"20150928-194341-1916610644-5050-5659-0000","name":"marathon","offered_resources":{"cpus":0,"disk":0,"mem":0},"offers":[],"pid":"scheduler-06005827-a968-44e8-9af8-3a7739536b6d@84.40.61.114:56825","registered_time":1443484805.46246,"resources":{"cpus":1.5,"disk":0,"mem":3000,"ports":"[31389-31389, 31554-31554, 31162-31162]"},"role":"*","tasks":[{"executor_id":"","framework_id":"20150928-194341-1916610644-5050-5659-0000","id":"cb-test.c326b46b-663d-11e5-92d4-28802390ec8c","labels":[],"name":"cb-test","resources":{"cpus":0.5,"disk":0,"mem":1000,"ports":"[31162-31162]"},"slave_id":"20150928-194335-1916610644-5050-4912-S0","state":"TASK_RUNNING","statuses":[{"labels":[{"key":"Docker.NetworkSettings.IPAddress","value":"172.167.1.4"}],"state":"TASK_RUNNING","timestamp":1443485116.6033}]},{"executor_id":"","framework_id":"20150928-194341-1916610644-5050-5659-0000","id":"cb-test.bf92b83a-663d-11e5-92d4-28802390ec8c","labels":[],"name":"cb-test","resources":{"cpus":0.5,"disk":0,"mem":1000,"ports":"[31554-31554]"},"slave_id":"20150928-194335-1916610644-5050-4912-S0","state":"TASK_RUNNING","statuses":[{"labels":[{"key":"Docker.NetworkSettings.IPAddress","value":"172.167.1.3"}],"state":"TASK_RUNNING","timestamp":1443485110.58209}]},{"executor_id":"","framework_id":"20150928-194341-1916610644-5050-5659-0000","id":"cb-test.bb65d769-663d-11e5-92d4-28802390ec8c","labels":[],"name":"cb-test","resources":{"cpus":0.5,"disk":0,"mem":1000,"ports":"[31389-31389]"},"slave_id":"20150928-194335-1916610644-5050-4912-S0","state":"TASK_RUNNING","statuses":[{"labels":[{"key":"Docker.NetworkSettings.IPAddress","value":"172.167.1.2"}],"state":"TASK_RUNNING","timestamp":1443485105.36827}]}],"unregistered_time":0,"used_resources":{"cpus":1.5,"disk":0,"mem":3000,"ports":"[31389-31389, 31554-31554, 31162-31162]"},"user":"root","webui_url":"http:\/\/instance-11842.bigstep.io:8080"}],"git_sha":"44873806c2bb55da37e9adbece938274d8cd7c48","git_tag":"0.24.1","hostname":"instance-11842.bigstep.io","id":"20150928-194341-1916610644-5050-5659","leader":"master@84.40.61.114:5050","log_dir":"\/var\/log\/mesos","orphan_tasks":[],"pid":"master@84.40.61.114:5050","slaves":[{"active":true,"attributes":{},"hostname":"instance-11842.bigstep.io","id":"20150928-194335-1916610644-5050-4912-S0","offered_resources":{"cpus":0,"disk":0,"mem":0},"pid":"slave(1)@84.40.61.114:5051","registered_time":1443484804.96005,"reregistered_time":1443484804.96009,"reserved_resources":{},"resources":{"cpus":8,"disk":31725,"mem":30947,"ports":"[31000-32000]"},"unreserved_resources":{"cpus":8,"disk":31725,"mem":30947,"ports":"[31000-32000]"},"used_resources":{"cpus":1.5,"disk":0,"mem":3000,"ports":"[31389-31389, 31554-31554, 31162-31162]"}}],"start_time":1443483821.43293,"unregistered_frameworks":[],"version":"0.24.1"}
+object(stdClass)#1 (22) {
+  ["activated_slaves"]=>
+  int(1)
+  ["build_date"]=>
+  string(19) "2015-09-25 19:13:37"
+  ["build_time"]=>
+  int(1443208417)
+  ["build_user"]=>
+  string(4) "root"
+  ["cluster"]=>
+  string(7) "Mesos-1"
+  ["completed_frameworks"]=>
+  array(0) {
+  }
+  ["deactivated_slaves"]=>
+  int(0)
+  ["elected_time"]=>
+  float(1443484804.0116)
+  ["flags"]=>
+  object(stdClass)#5 (32) {
+    ["allocation_interval"]=>
+    string(5) "1secs"
+    ["allocator"]=>
+    string(15) "HierarchicalDRF"
+    ["authenticate"]=>
+    string(5) "false"
+    ["authenticate_slaves"]=>
+    string(5) "false"
+    ["authenticators"]=>
+    string(7) "crammd5"
+    ["authorizers"]=>
+    string(5) "local"
+    ["cluster"]=>
+    string(7) "Mesos-1"
+    ["framework_sorter"]=>
+    string(3) "drf"
+    ["help"]=>
+    string(5) "false"
+    ["initialize_driver_logging"]=>
+    string(4) "true"
+    ["log_auto_initialize"]=>
+    string(4) "true"
+    ["log_dir"]=>
+    string(14) "/var/log/mesos"
+    ["logbufsecs"]=>
+    string(1) "0"
+    ["logging_level"]=>
+    string(4) "INFO"
+    ["max_slave_ping_timeouts"]=>
+    string(1) "5"
+    ["port"]=>
+    string(4) "5050"
+    ["quiet"]=>
+    string(5) "false"
+    ["quorum"]=>
+    string(1) "1"
+    ["recovery_slave_removal_limit"]=>
+    string(4) "100%"
+    ["registry"]=>
+    string(14) "replicated_log"
+    ["registry_fetch_timeout"]=>
+    string(5) "1mins"
+    ["registry_store_timeout"]=>
+    string(5) "5secs"
+    ["registry_strict"]=>
+    string(5) "false"
+    ["root_submissions"]=>
+    string(4) "true"
+    ["slave_ping_timeout"]=>
+    string(6) "15secs"
+    ["slave_reregister_timeout"]=>
+    string(6) "10mins"
+    ["user_sorter"]=>
+    string(3) "drf"
+    ["version"]=>
+    string(5) "false"
+    ["webui_dir"]=>
+    string(22) "/usr/share/mesos/webui"
+    ["work_dir"]=>
+    string(14) "/var/lib/mesos"
+    ["zk"]=>
+    string(41) "zk://instance-11842.bigstep.io:2181/mesos"
+    ["zk_session_timeout"]=>
+    string(6) "10secs"
+  }
+  ["frameworks"]=>
+  array(1) {
+    [0]=>
+    object(stdClass)#6 (20) {
+      ["active"]=>
+      bool(true)
+      ["capabilities"]=>
+      array(0) {
+      }
+      ["checkpoint"]=>
+      bool(true)
+      ["completed_tasks"]=>
+      array(3) {
+        [0]=>
+        object(stdClass)#7 (9) {
+          ["executor_id"]=>
+          string(0) ""
+          ["framework_id"]=>
+          string(41) "20150928-194341-1916610644-5050-5659-0000"
+          ["id"]=>
+          string(44) "cb-test.8fe0a2f6-663d-11e5-92d4-28802390ec8c"
+          ["labels"]=>
+          array(0) {
+          }
+          ["name"]=>
+          string(7) "cb-test"
+          ["resources"]=>
+          object(stdClass)#8 (4) {
+            ["cpus"]=>
+            float(0.5)
+            ["disk"]=>
+            int(0)
+            ["mem"]=>
+            int(1000)
+            ["ports"]=>
+            string(13) "[31646-31646]"
+          }
+          ["slave_id"]=>
+          string(39) "20150928-194335-1916610644-5050-4912-S0"
+          ["state"]=>
+          string(11) "TASK_FAILED"
+          ["statuses"]=>
+          array(1) {
+            [0]=>
+            object(stdClass)#9 (2) {
+              ["state"]=>
+              string(11) "TASK_FAILED"
+              ["timestamp"]=>
+              float(1443485089.896)
+            }
+          }
+        }
+        [1]=>
+        object(stdClass)#10 (9) {
+          ["executor_id"]=>
+          string(0) ""
+          ["framework_id"]=>
+          string(41) "20150928-194341-1916610644-5050-5659-0000"
+          ["id"]=>
+          string(44) "cb-test.9370a787-663d-11e5-92d4-28802390ec8c"
+          ["labels"]=>
+          array(0) {
+          }
+          ["name"]=>
+          string(7) "cb-test"
+          ["resources"]=>
+          object(stdClass)#11 (4) {
+            ["cpus"]=>
+            float(0.5)
+            ["disk"]=>
+            int(0)
+            ["mem"]=>
+            int(1000)
+            ["ports"]=>
+            string(13) "[31497-31497]"
+          }
+          ["slave_id"]=>
+          string(39) "20150928-194335-1916610644-5050-4912-S0"
+          ["state"]=>
+          string(11) "TASK_FAILED"
+          ["statuses"]=>
+          array(1) {
+            [0]=>
+            object(stdClass)#12 (2) {
+              ["state"]=>
+              string(11) "TASK_FAILED"
+              ["timestamp"]=>
+              float(1443485095.8117)
+            }
+          }
+        }
+        [2]=>
+        object(stdClass)#13 (9) {
+          ["executor_id"]=>
+          string(0) ""
+          ["framework_id"]=>
+          string(41) "20150928-194341-1916610644-5050-5659-0000"
+          ["id"]=>
+          string(44) "cb-test.9704a3b8-663d-11e5-92d4-28802390ec8c"
+          ["labels"]=>
+          array(0) {
+          }
+          ["name"]=>
+          string(7) "cb-test"
+          ["resources"]=>
+          object(stdClass)#14 (4) {
+            ["cpus"]=>
+            float(0.5)
+            ["disk"]=>
+            int(0)
+            ["mem"]=>
+            int(1000)
+            ["ports"]=>
+            string(13) "[31377-31377]"
+          }
+          ["slave_id"]=>
+          string(39) "20150928-194335-1916610644-5050-4912-S0"
+          ["state"]=>
+          string(11) "TASK_FAILED"
+          ["statuses"]=>
+          array(1) {
+            [0]=>
+            object(stdClass)#15 (2) {
+              ["state"]=>
+              string(11) "TASK_FAILED"
+              ["timestamp"]=>
+              float(1443485101.8305)
+            }
+          }
+        }
+      }
+      ["executors"]=>
+      array(0) {
+      }
+      ["failover_timeout"]=>
+      int(604800)
+      ["hostname"]=>
+      string(25) "instance-11842.bigstep.io"
+      ["id"]=>
+      string(41) "20150928-194341-1916610644-5050-5659-0000"
+      ["name"]=>
+      string(8) "marathon"
+      ["offered_resources"]=>
+      object(stdClass)#16 (3) {
+        ["cpus"]=>
+        int(0)
+        ["disk"]=>
+        int(0)
+        ["mem"]=>
+        int(0)
+      }
+      ["offers"]=>
+      array(0) {
+      }
+      ["pid"]=>
+      string(65) "scheduler-06005827-a968-44e8-9af8-3a7739536b6d@84.40.61.114:56825"
+      ["registered_time"]=>
+      float(1443484805.4625)
+      ["resources"]=>
+      object(stdClass)#17 (4) {
+        ["cpus"]=>
+        float(1.5)
+        ["disk"]=>
+        int(0)
+        ["mem"]=>
+        int(3000)
+        ["ports"]=>
+        string(39) "[31389-31389, 31554-31554, 31162-31162]"
+      }
+      ["role"]=>
+      string(1) "*"
+      ["tasks"]=>
+      array(3) {
+        [0]=>
+        object(stdClass)#18 (9) {
+          ["executor_id"]=>
+          string(0) ""
+          ["framework_id"]=>
+          string(41) "20150928-194341-1916610644-5050-5659-0000"
+          ["id"]=>
+          string(44) "cb-test.c326b46b-663d-11e5-92d4-28802390ec8c"
+          ["labels"]=>
+          array(0) {
+          }
+          ["name"]=>
+          string(7) "cb-test"
+          ["resources"]=>
+          object(stdClass)#19 (4) {
+            ["cpus"]=>
+            float(0.5)
+            ["disk"]=>
+            int(0)
+            ["mem"]=>
+            int(1000)
+            ["ports"]=>
+            string(13) "[31162-31162]"
+          }
+          ["slave_id"]=>
+          string(39) "20150928-194335-1916610644-5050-4912-S0"
+          ["state"]=>
+          string(12) "TASK_RUNNING"
+          ["statuses"]=>
+          array(1) {
+            [0]=>
+            object(stdClass)#20 (3) {
+              ["labels"]=>
+              array(1) {
+                [0]=>
+                object(stdClass)#21 (2) {
+                  ["key"]=>
+                  string(32) "Docker.NetworkSettings.IPAddress"
+                  ["value"]=>
+                  string(11) "172.167.1.4"
+                }
+              }
+              ["state"]=>
+              string(12) "TASK_RUNNING"
+              ["timestamp"]=>
+              float(1443485116.6033)
+            }
+          }
+        }
+        [1]=>
+        object(stdClass)#22 (9) {
+          ["executor_id"]=>
+          string(0) ""
+          ["framework_id"]=>
+          string(41) "20150928-194341-1916610644-5050-5659-0000"
+          ["id"]=>
+          string(44) "cb-test.bf92b83a-663d-11e5-92d4-28802390ec8c"
+          ["labels"]=>
+          array(0) {
+          }
+          ["name"]=>
+          string(7) "cb-test"
+          ["resources"]=>
+          object(stdClass)#23 (4) {
+            ["cpus"]=>
+            float(0.5)
+            ["disk"]=>
+            int(0)
+            ["mem"]=>
+            int(1000)
+            ["ports"]=>
+            string(13) "[31554-31554]"
+          }
+          ["slave_id"]=>
+          string(39) "20150928-194335-1916610644-5050-4912-S0"
+          ["state"]=>
+          string(12) "TASK_RUNNING"
+          ["statuses"]=>
+          array(1) {
+            [0]=>
+            object(stdClass)#24 (3) {
+              ["labels"]=>
+              array(1) {
+                [0]=>
+                object(stdClass)#25 (2) {
+                  ["key"]=>
+                  string(32) "Docker.NetworkSettings.IPAddress"
+                  ["value"]=>
+                  string(11) "172.167.1.3"
+                }
+              }
+              ["state"]=>
+              string(12) "TASK_RUNNING"
+              ["timestamp"]=>
+              float(1443485110.5821)
+            }
+          }
+        }
+        [2]=>
+        object(stdClass)#26 (9) {
+          ["executor_id"]=>
+          string(0) ""
+          ["framework_id"]=>
+          string(41) "20150928-194341-1916610644-5050-5659-0000"
+          ["id"]=>
+          string(44) "cb-test.bb65d769-663d-11e5-92d4-28802390ec8c"
+          ["labels"]=>
+          array(0) {
+          }
+          ["name"]=>
+          string(7) "cb-test"
+          ["resources"]=>
+          object(stdClass)#27 (4) {
+            ["cpus"]=>
+            float(0.5)
+            ["disk"]=>
+            int(0)
+            ["mem"]=>
+            int(1000)
+            ["ports"]=>
+            string(13) "[31389-31389]"
+          }
+          ["slave_id"]=>
+          string(39) "20150928-194335-1916610644-5050-4912-S0"
+          ["state"]=>
+          string(12) "TASK_RUNNING"
+          ["statuses"]=>
+          array(1) {
+            [0]=>
+            object(stdClass)#28 (3) {
+              ["labels"]=>
+              array(1) {
+                [0]=>
+                object(stdClass)#29 (2) {
+                  ["key"]=>
+                  string(32) "Docker.NetworkSettings.IPAddress"
+                  ["value"]=>
+                  string(11) "172.167.1.2"
+                }
+              }
+              ["state"]=>
+              string(12) "TASK_RUNNING"
+              ["timestamp"]=>
+              float(1443485105.3683)
+            }
+          }
+        }
+      }
+      ["unregistered_time"]=>
+      int(0)
+      ["used_resources"]=>
+      object(stdClass)#30 (4) {
+        ["cpus"]=>
+        float(1.5)
+        ["disk"]=>
+        int(0)
+        ["mem"]=>
+        int(3000)
+        ["ports"]=>
+        string(39) "[31389-31389, 31554-31554, 31162-31162]"
+      }
+      ["user"]=>
+      string(4) "root"
+      ["webui_url"]=>
+      string(37) "http://instance-11842.bigstep.io:8080"
+    }
+  }
+  ["git_sha"]=>
+  string(40) "44873806c2bb55da37e9adbece938274d8cd7c48"
+  ["git_tag"]=>
+  string(6) "0.24.1"
+  ["hostname"]=>
+  string(25) "instance-11842.bigstep.io"
+  ["id"]=>
+  string(36) "20150928-194341-1916610644-5050-5659"
+  ["leader"]=>
+  string(24) "master@84.40.61.114:5050"
+  ["log_dir"]=>
+  string(14) "/var/log/mesos"
+  ["orphan_tasks"]=>
+  array(0) {
+  }
+  ["pid"]=>
+  string(24) "master@84.40.61.114:5050"
+  ["slaves"]=>
+  array(1) {
+    [0]=>
+    object(stdClass)#31 (12) {
+      ["active"]=>
+      bool(true)
+      ["attributes"]=>
+      object(stdClass)#32 (0) {
+      }
+      ["hostname"]=>
+      string(25) "instance-11842.bigstep.io"
+      ["id"]=>
+      string(39) "20150928-194335-1916610644-5050-4912-S0"
+      ["offered_resources"]=>
+      object(stdClass)#33 (3) {
+        ["cpus"]=>
+        int(0)
+        ["disk"]=>
+        int(0)
+        ["mem"]=>
+        int(0)
+      }
+      ["pid"]=>
+      string(26) "slave(1)@84.40.61.114:5051"
+      ["registered_time"]=>
+      float(1443484804.9601)
+      ["reregistered_time"]=>
+      float(1443484804.9601)
+      ["reserved_resources"]=>
+      object(stdClass)#34 (0) {
+      }
+      ["resources"]=>
+      object(stdClass)#35 (4) {
+        ["cpus"]=>
+        int(8)
+        ["disk"]=>
+        int(31725)
+        ["mem"]=>
+        int(30947)
+        ["ports"]=>
+        string(13) "[31000-32000]"
+      }
+      ["unreserved_resources"]=>
+      object(stdClass)#36 (4) {
+        ["cpus"]=>
+        int(8)
+        ["disk"]=>
+        int(31725)
+        ["mem"]=>
+        int(30947)
+        ["ports"]=>
+        string(13) "[31000-32000]"
+      }
+      ["used_resources"]=>
+      object(stdClass)#37 (4) {
+        ["cpus"]=>
+        float(1.5)
+        ["disk"]=>
+        int(0)
+        ["mem"]=>
+        int(3000)
+        ["ports"]=>
+        string(39) "[31389-31389, 31554-31554, 31162-31162]"
+      }
+    }
+  }
+  ["start_time"]=>
+  float(1443483821.4329)
+  ["unregistered_frameworks"]=>
+  array(0) {
+  }
+  ["version"]=>
+  string(6) "0.24.1"
+}
