@@ -5,6 +5,7 @@ include_once("utilities.php");
 
 function marathon_create($app_id, $docker_image_name,$cpus,$mem,$instances)
 {
+	dbg_log("Marathon create for $app_id");
 	$app_id_sanitised=preg_replace("/[^A-Za-z0-9 ]/", '', $app_id);
 	$app_definition = array(
 		"id"   => get_config()->app_prefix."-".$app_id_sanitised,
@@ -66,7 +67,7 @@ function marathon_get_tasks($app_id)
 	
 	dbg_log($result);
 	curl_close($ch);
-	$decoded_object=json_decode($result);	
-	return $decoded_object->tasks;
+	$decoded_object=json_decode($result,true);	
+	return $decoded_object["tasks"];
 }
 

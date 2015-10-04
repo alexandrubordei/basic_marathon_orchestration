@@ -8,7 +8,7 @@ function ip_pool_get_state()
 {
 	$state_file = get_config()->ip_pool_state_file;
 
-	if(!file_exists($state_file))
+	if(!file_exists($state_file)||filesize($state_file)==0)
 	{
 		$available_ips= get_config()->ip_pool;	
 		$state=Array(	
@@ -24,7 +24,7 @@ function ip_pool_get_state()
 function ip_pool_save_state($state)
 {
 	$state_file = get_config()->ip_pool_state_file;
-
+	dbg_log("Writing ippool state ".print_r($state,true)." to $state_file");
 	file_put_contents($state_file,json_encode($state));
 }
 
@@ -39,9 +39,13 @@ function ip_pool_allocate($metadata)
 	$meta = $state["meta"];
 	
 	if(count($available_ips)==0)
-		throw new Exception("IP Pool ran out of IP Addresses");	
+		return NULL;
 
 	$ip = array_shift($available_ips);	
+
+	if($ip==NULL)
+		return NULL;
+
 	$meta[$ip] = $metadata;	
 	
 	array_push($used_ips, $ip);
@@ -56,6 +60,8 @@ function ip_pool_allocate($metadata)
 	
 }
 
+
+
 function ip_pool_deallocate($ip)
 {
 	$state = ip_pool_get_state();
@@ -68,7 +74,10 @@ function ip_pool_deallocate($ip)
 	$used_ips = array_diff($used_ips,array($ip));	
 	
 	array_push($available_ips, $ip);
+	$mymeta=$meta[$ip];
+	unset($mymeta);
 	unset($meta[$ip]);	
+	
 
 	$state["available_ips"] = $available_ips;
 	$state["used_ips"] = $used_ips;

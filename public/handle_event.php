@@ -1,6 +1,6 @@
 <?php
 
-include_once(dirname(__FILE__) ."/../bin/events.php");
+include_once(dirname(__FILE__) ."/../lib/events.php");
 include_once(dirname(__FILE__) ."/../lib/utilities.php");
 
 

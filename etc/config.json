@@ -1,19 +1,20 @@
 {
-	"marathon_uri": "http://instance-11842.bigstep.io:8080",
-	"mesos_uri": "http://instance-11842.bigstep.io:5050",
-	"host_ssh_private_key": "/Users/alexandrubordei/.ssh/id_rsa_tmp",
+	"marathon_uri": "http://instance-11703.bigstep.io:8080",
+	"mesos_uri": "http://instance-11703.bigstep.io:5050",
+	"host_ssh_private_key": "/opt/basic_marathon_orchestration/etc/id_rsa_tmp",
 	"host_ssh_username": "root",
 	"host_ssh_private_key_password": "",
 	"pipework_path": "/opt/pipework/pipework",
 	"wanbridge": "wanbr",
-	"app_prefix":"cb",
-	"ip_pool_state_file": "/tmp/__ip_ranges_state.json",
+	"app_prefix": "cb",
+	"log_file": "/var/log/marathonui.log",
+	"ip_pool_state_file": "/opt/basic_marathon_orchestration/tmp/__ip_ranges_state.json2",
 	"ip_pool": [ 
 		"84.40.61.34",
 		"84.40.61.35",
 		"84.40.61.36",
 		"84.40.61.37"
-	]
-	"ip_pool_gateway":"84.40.61.33",
+	],
+	"ip_pool_gateway": "84.40.61.33",
 	"ip_pool_netmask": 27
 }

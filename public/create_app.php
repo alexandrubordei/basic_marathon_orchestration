@@ -1,0 +1,20 @@
+<?php
+require_once(dirname(__FILE__)."/../lib/utilities.php");
+require_once(dirname(__FILE__)."/../lib/marathon_api.php");
+
+var_dump($_POST);
+if($_SERVER['REQUEST_METHOD']=='POST')
+{
+	if(array_key_exists("appid",$_POST))
+	{
+		$appid=$_POST["appid"];
+		dbg_log("creating app $appid");
+		marathon_create($appid,
+				"couchbase/server",
+				1,
+				1024,
+				3);
+		header("Location: http://".$_SERVER["SERVER_NAME"]."/app_details.php?appid=$appid");
+	}
+}
+

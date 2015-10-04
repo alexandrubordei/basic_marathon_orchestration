@@ -38,3 +38,29 @@ function docker_add_container_public_ip($host, $containerID, $ip, $netmask, $gat
 	$json=$ssh->exec($cmd);
 	dbg_log($json);
 }
+
+function docker_get_container_details_for_all($host)
+{
+
+	$containers = docker_get_containers($host);
+	$container_details =array();
+
+	foreach($containers as $container)
+	{
+
+	#	var_dump($container);
+
+		$containerID = $container["Id"];
+		$containerDetails=docker_get_container_details($host, $containerID);
+
+		foreach($containerDetails["Config"]["Env"] as $env)
+		{
+			if(1==preg_match('/^MESOS_TASK_ID\=(.*)/',$env,$match)) 
+			{
+				dbg_log("===========Found match {$match[1]}".print_r($match,true)." in ".$env);
+				$container_details[$match[1]]=$containerDetails;
+			}	
+		}
+	}	
+	return $container_details;
+}
