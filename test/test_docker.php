@@ -4,10 +4,11 @@ include_once(dirname(__FILE__) ."/../lib/utilities.php");
 
 
 
-$containers=docker_get_containers("instance-11842.bigstep.io");
+$containers=docker_get_containers("instance-11705.bigstep.io");
+var_dump($containers);
 
 $containerID=$containers[1]["Id"];
-$containerDetails=docker_get_container_details("instance-11842.bigstep.io", $containerID);
+$containerDetails=docker_get_container_details("instance-11705.bigstep.io", $containerID);
 var_dump($containerDetails); 
 
 foreach($containerDetails["Config"]["Env"] as $env)

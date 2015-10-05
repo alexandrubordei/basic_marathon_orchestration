@@ -6,8 +6,9 @@ require_once("ssh.php");
 
 function docker_get_containers($host)
 {
-	$cmd = "echo -e \"GET /containers/json HTTP/1.0\r\n\" | nc -U /var/run/docker.sock | tail -n +6";			
+	$cmd = "echo -e \"GET /containers/json HTTP/1.0\r\n\" | nc -U /var/run/docker.sock | tail -n +5";			
 
+	dbg_log("docker_get_containers: $cmd");
 	$ssh = ssh_connect($host);
 	$json=$ssh->exec($cmd);
 	dbg_log($json);
@@ -18,7 +19,7 @@ function docker_get_container_details($host, $containerID)
 {
 	$cmd = "echo -e \"GET /containers/$containerID/json HTTP/1.0\r\n\" | nc -U /var/run/docker.sock | tail -n +5";			
 
-	dbg_log("get_container_details: $cmd");
+	dbg_log("docker_get_container_details: $cmd");
 
 	$ssh = ssh_connect($host);
 	$json=$ssh->exec($cmd);

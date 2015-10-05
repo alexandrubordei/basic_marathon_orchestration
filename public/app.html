@@ -35,35 +35,15 @@
     <!-- Begin page content -->
     <div class="container">
       <div class="page-header">
-        <h1>Create Marathon Application</h1>
+        <h1>View Application Details</h1>
       </div>
       <p class="lead">Create a new application within Marathon on the Full Metal Cloud.</p>
-       <form action="/create_app.php" method="post">
+       <form action="/app_details.php" method="get">
 	  <div class="form-group">
 	    <label for="appid">Application Name</label>
 	    <input type="text" name="appid" class="form-control" id="appid" placeholder="unique app name"/>
-
-	    <label for="dockerimage">Docker image</label>
-	    <input type="text" name="dockerimage" class="form-control" id="dockerimage" placeholder="bigstepinc/centos7ssh" value="bigstepinc/centos7ssh"/>
-
-	    <label for=instances">Instances</label>
-	    <input type="text" name="instances" class="form-control" id="instances" placeholder="3" readonly value="3"/>
-	    <label for="cpus">Number of CPUs per container</label>
-	    <input type="text" name="cpus" class="form-control" id="cpus" placeholder="1.0" readonly value=0.5 />
-
-	    <label for="mem">Ammount of RAM per container (in MB)</label>
-	    <input type="text" name="mem" class="form-control" id="mem" placeholder="1024" readonly value="1024"/>
-
-
 	  </div> 
-	   <div class="row">
-		<div class="col-md-8">
-		  <button type="submit" class="btn btn-default">Create</button>
-		</div>
-		<div class="col-md-4">
-			or <a href="app.html">open an exiting application</a>
-		</div>
-	    </div>
+	  <button type="submit" class="btn btn-default">Open</button>
        </form>
     </div>
 
