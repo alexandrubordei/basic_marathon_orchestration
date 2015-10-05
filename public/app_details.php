@@ -35,7 +35,7 @@
     <!-- Begin page content -->
     <div class="container">
       <div class="page-header">
-        <h1>Application Details</h1>
+        <h1><?php echo $_GET["appid"]; ?> containers</h1>
       </div>
 
 	<div>
@@ -44,7 +44,7 @@
 		</div>
 	</div>
 
-
+	<button type="button" class="btn btn-danger" onClick="destroy_app();">Destroy App</button>
    </div>
 
     
@@ -66,11 +66,19 @@
 		function update(){
 		  $.get("app_details_region.php?appid=<?php echo $_GET["appid"]; ?>", function(data) {
 		    $("#app_details").html(data);
-		    window.setTimeout(update, 1000);
+		    window.setTimeout(update, 5000);
 		  });
 		}
 		update();
-    </script>
+    </script> 
+    <script type="text/javascript">
+	function destroy_app()	
+	{
+		$.post("destroy_app.php","appid=<?php echo $_GET["appid"]; ?>");	
+		window.location.href = "/index.html";
+		
+	}
+   </script>
 
 
 

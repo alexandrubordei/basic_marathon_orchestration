@@ -67,7 +67,7 @@
 
 		  $.get("container_details_region.php?containerid=<?php echo $_GET["containerid"]; ?>&host=<?php echo $_GET["host"]; ?>", function(data) {
 		    $("#details").html(data);
-		    window.setTimeout(update, 1000);
+		    window.setTimeout(update, 5000);
 		  });
 		}
 		update();

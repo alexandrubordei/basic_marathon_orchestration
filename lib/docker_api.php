@@ -26,12 +26,12 @@ function docker_get_container_details($host, $containerID)
 	return json_decode($json,true);
 }
 
-function docker_add_container_public_ip($host, $containerID, $ip, $netmask, $gateway)
+function docker_add_container_public_ip($host, $containerID, $ip)
 {
 	$pipework = get_config()->pipework_path;
 	$bridge = get_config()->wanbridge;
 
-	$cmd = "$pipework $bridge $containerID $ip/$netmask@$gateway";
+	$cmd = "$pipework $bridge $containerID $ip";
 	dbg_log("get_container_details: $cmd");
 
 	$ssh = ssh_connect($host);

@@ -41,9 +41,21 @@
        <form action="/create_app.php" method="post">
 	  <div class="form-group">
 	    <label for="appid">Application Name</label>
-	    <input type="text" name="appid" class="form-control" id="appid" placeholder="unique app name">
+	    <input type="text" name="appid" class="form-control" id="appid" placeholder="unique app name"/>
+
+	    <label for="dockerimage">Docker image</label>
+	    <input type="text" name="dockerimage" class="form-control" id="dockerimage" placeholder="bigstepinc/centos7ssh" value="bigstepinc/centos7ssh"/>
+
+	    <label for=instances">Instances</label>
+	    <input type="text" name="instances" class="form-control" id="instances" placeholder="3" readonly value="3"/>
+	    <label for="cpus">Number of CPUs per container</label>
+	    <input type="text" name="cpus" class="form-control" id="cpus" placeholder="1.0" readonly value=0.5 />
+
+	    <label for="mem">Ammount of RAM per container (in MB)</label>
+	    <input type="text" name="mem" class="form-control" id="mem" placeholder="1024" readonly value="1024"/>
+
+
 	  </div> 
-	  <p>We will create 3 instances created using couchbase/server docker image each with 1.0 CPU cores and 1024 MB of RAM.</p>
 	  <button type="submit" class="btn btn-default">Submit</button>
        </form>
     </div>

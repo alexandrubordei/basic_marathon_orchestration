@@ -49,10 +49,10 @@ function handle_status_update_event($event)
 			throw new Exception("Could not allocate an ip address!");
 
 		dbg_log("Allocating ip $ip to docker id $containerID and mesos id $taskId");
-		docker_add_container_public_ip($host, $containerID, $ip, get_config()->ip_pool_netmask, get_config()->ip_pool_gateway);
+		docker_add_container_public_ip($host, $containerID, $ip);
 	}
 
-	  if( $prefix == get_config()->app_prefix  && $event["taskStatus"] == "TASK_KILLED"){
+	  if( $prefix == get_config()->app_prefix  && ($event["taskStatus"] == "TASK_KILLED" || $event["taskStatus"] =="TASK_LOST" || $event["taskStatus"] =="TASK_FAILED" ) ){
 	   	dbg_log("Handling event");
 
 		$taskID = $event["taskId"];

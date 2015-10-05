@@ -45,6 +45,32 @@ function marathon_create($app_id, $docker_image_name,$cpus,$mem,$instances)
 	return $app_id_sanitised;
 }
 
+function marathon_destroy($app_id)
+{
+	dbg_log("Marathon destroy for $app_id");
+	$app_id_sanitised=preg_replace("/[^A-Za-z0-9 ]/", '', $app_id);
+
+	$ch  = curl_init();
+	$url = get_config()->marathon_uri."/v2/apps/".get_config()->app_prefix."-".$app_id_sanitised;
+
+	dbg_log("Calling ".$url);
+
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+	curl_setopt($ch, CURLOPT_HEADER, 0); 
+	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+	$result = curl_exec($ch);
+
+
+	dbg_log($result);
+
+	curl_close($ch);
+
+	return $result;
+}
+
+
+
 
 function marathon_get_tasks($app_id)
 {

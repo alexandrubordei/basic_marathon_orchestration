@@ -23,6 +23,9 @@ $tasks=marathon_get_tasks($_GET['appid']);
 </thead>
 <tbody>
 <?php 
+if(count($tasks)==0)
+	echo "<tr scope=\"row\"><td>please wait...</td><tr>";
+else
 foreach($tasks as $task){ 
 
 	$id=$task["id"];
