@@ -18,7 +18,12 @@ function marathon_create($app_id, $docker_image_name,$cpus,$mem,$instances)
 			"docker" => 
 			    array(
 				"image" => $docker_image_name,
-				"network" => "BRIDGE"
+				"network" => "BRIDGE",
+				"parameters" => array( 
+							array( "key" => "ulimit", "value" => "nofile=40960:40960" ),
+							array( "key" => "ulimit", "value" => "core=100000000:100000000" ),
+							array( "key" => "ulimit", "value" => "memlock=100000000:100000000" )
+						)
 			   )
 		    )
 	    );
