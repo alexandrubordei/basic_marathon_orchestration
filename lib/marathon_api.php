@@ -102,3 +102,27 @@ function marathon_get_tasks($app_id)
 	return $decoded_object["tasks"];
 }
 
+function marathon_get_apps()
+{
+
+	$ch  = curl_init();
+	$url = get_config()->marathon_uri."/v2/apps/";
+
+	dbg_log("Calling ".$url);
+
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+	$result = curl_exec($ch);
+
+	$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+	if($httpCode != 200)
+		return NULL;
+
+
+	
+	dbg_log($result);
+	curl_close($ch);
+	$decoded_object=json_decode($result,true);	
+	return $decoded_object["apps"];
+}
+
